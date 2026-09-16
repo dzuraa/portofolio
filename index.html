@@ -1,198 +1,528 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daffa Dzulfikar Ramadhan | QA Engineer</title>
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom Config for Tailwind Colors -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#0ea5e9', dark: '#0f172a', card: '#1e293b' }
+                    colors: { primary: '#0ea5e9', dark: '#0f172a', card: '#1e293b' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-dark text-slate-300 font-sans antialiased overflow-x-hidden">
+
+<body class="bg-dark text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-dark/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white tracking-wider">DAFFA<span class="text-primary">.</span></a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#about" class="hover:text-primary transition">About</a>
-                <a href="#experience" class="hover:text-primary transition">Experience</a>
-                <a href="#projects" class="hover:text-primary transition">Projects</a>
-                <a href="#skills" class="hover:text-primary transition">Skills & Certs</a>
-            </div>
+    <nav class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-8 lg:px-12 py-4 flex justify-between items-center"> <!-- Logo --> <a
+                href="#about" class="text-2xl font-bold text-white tracking-wider"> PORTOFOLIO<span
+                    class="text-primary">.</span> </a> <!-- Navigation -->
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium"> <a href="#about"
+                    class="hover:text-primary transition-colors">About</a> <a href="#experience"
+                    class="hover:text-primary transition-colors">Experience</a> <a href="#projects"
+                    class="hover:text-primary transition-colors">Projects</a> <a href="#skills"
+                    class="hover:text-primary transition-colors">Skills</a> </div>
         </div>
     </nav>
 
+    ```html
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-20" data-aos="fade-up" data-aos-duration="1000">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <p class="text-primary font-medium mb-2 tracking-wide">HELLO, I AM</p>
-                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Daffa Dzulfikar <br> Ramadhan</h1>
-                <h2 class="text-2xl text-slate-400 mb-6">Technical QA Engineer <span class="text-sm border border-primary text-primary px-2 py-1 rounded ml-2">Ex-Backend Dev</span></h2>
-                <p class="text-lg leading-relaxed mb-8">
-                    A detail-oriented QA Engineer with a strong 9-month foundation in backend development (NestJS & PostgreSQL). 
-                    I bridge the gap between technical complexity and business needs. <strong class="text-white">I excel in client communication, frequently leading meetings and confidently presenting technical updates to external stakeholders.</strong>
-                </p>
-                <div class="flex space-x-4">
-                    <a href="mailto:daffadoet17@gmail.com" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-600 transition shadow-lg shadow-sky-500/30">
-                        <i class="fa-solid fa-envelope mr-2"></i> Contact Me
-                    </a>
-                    <a href="https://linkedin.com/in/daffa-dr/" target="_blank" class="bg-card text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition border border-slate-700">
-                        <i class="fa-brands fa-linkedin text-xl"></i>
-                    </a>
+    <section id="about" class="min-h-screen flex items-center pt-20 relative">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-8 lg:px-12 w-full">
+            <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+
+                <!-- Content -->
+                <div data-aos="fade-up" data-aos-duration="1000">
+
+                    <p class="text-primary font-semibold mb-3 tracking-widest text-sm uppercase">
+                        Professional Profile
+                    </p>
+
+                    <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+                        Daffa Dzulfikar <br>
+                        Ramadhan
+                    </h1>
+
+                    <h2 class="text-2xl text-slate-400 mb-6 font-medium">
+                        QA Engineer
+                    </h2>
+
+                    <p class="text-lg leading-relaxed mb-8 text-slate-400 max-w-3xl">
+                        Detail-oriented QA Engineer with a strong foundation in backend development and software
+                        architecture. Experienced in QA, troubleshooting, and managing software projects from testing to
+                        UAT and product handover. Strong communicator with excellent English proficiency, experienced in
+                        leading client meetings, presenting technical updates, and bridging technical issues with both
+                        technical and non-technical stakeholders.
+                    </p>
+
+                    <!-- Contact Buttons -->
+                    <div class="flex flex-wrap gap-4">
+
+                        <!-- Email -->
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daffadzulfikar17@gmail.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-5 py-3 bg-primary text-white rounded-lg font-medium hover:bg-sky-600 transition-all duration-300 shadow-lg shadow-primary/20">
+                            <i class="fa-solid fa-envelope"></i>
+                            Email Me
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/daffa-dr/" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-5 py-3 border border-slate-700 text-slate-300 rounded-lg font-medium hover:border-primary hover:text-primary transition-all duration-300">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            LinkedIn
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/dzuraa" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-5 py-3 border border-slate-700 text-slate-300 rounded-lg font-medium hover:border-primary hover:text-primary transition-all duration-300">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+
+                    </div>
+
                 </div>
-            </div>
-            <!-- Placeholder for Photo/Abstract Graphic -->
-            <div class="relative flex justify-center" data-aos="zoom-in" data-aos-delay="200">
-                <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-primary to-emerald-400 p-1 blur-sm absolute opacity-50 animate-pulse"></div>
-                <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-card border-4 border-slate-800 z-10 flex items-center justify-center text-slate-500 shadow-2xl">
-                    <i class="fa-solid fa-user-astronaut text-6xl"></i>
-                    <!-- Ganti icon di atas dengan tag img jika ada foto: <img src="fotokamu.jpg" class="rounded-full w-full h-full object-cover"> -->
+
+                <!-- Image -->
+                <div class="flex justify-center lg:justify-end" data-aos="zoom-in" data-aos-delay="200">
+
+                    <div class="w-72 h-72 lg:w-96 lg:h-96 rounded-full border-2 border-primary/30 p-2 relative">
+
+                        <div class="absolute inset-0 border-t-2 border-primary rounded-full animate-spin"
+                            style="animation-duration: 3s;">
+                        </div>
+
+                        <img src="foto formal new blue bg.png" alt="Daffa Dzulfikar Ramadhan"
+                            class="w-full h-full rounded-full object-cover shadow-2xl">
+
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="py-20 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center" data-aos="fade-right"><span class="text-primary mr-3">01.</span> Professional Experience</h2>
-            
-            <div class="relative border-l-2 border-slate-700 ml-3 md:ml-0 space-y-12">
+    <!-- (Bagian ini sama dengan sebelumnya, tetap dipertahankan) -->
+    <section id="experience" class="py-24 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 flex items-center" data-aos="fade-right">
+                <span class="text-primary font-mono mr-4">01.</span> Working Experience
+            </h2>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-6 space-y-16">
                 <!-- QA Role -->
-                <div class="pl-8 relative" data-aos="fade-up">
-                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1 shadow-[0_0_10px_#0ea5e9]"></div>
-                    <span class="text-sm text-primary font-bold tracking-widest uppercase">Sep 2025 - Sep 2026</span>
-                    <h3 class="text-2xl font-bold text-white mt-1">QA Engineer</h3>
-                    <h4 class="text-lg text-slate-400 mb-4">PT Solutionlabs Grup Indonesia</h4>
-                    <ul class="space-y-2 list-none">
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Leveraged backend background for deep root-cause analysis (API vs DB vs Frontend issues).</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Actively engaged in client meetings, communicating testing phases and resolutions.</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Managed end-to-end testing lifecycle, API testing via Postman, and performance testing via JMeter.</li>
+                <div class="pl-10 relative group" data-aos="fade-up">
+                    <div
+                        class="absolute w-5 h-5 bg-dark border-4 border-primary rounded-full -left-[11px] top-1 group-hover:shadow-[0_0_15px_#0ea5e9] transition-all">
+                    </div>
+                    <span class="text-sm text-primary font-semibold tracking-widest uppercase mb-1 block">Sep 2025 - Sep
+                        2026</span>
+                    <h3 class="text-2xl font-bold text-white">QA Engineer</h3>
+                    <h4 class="text-lg text-slate-400 mb-4 font-medium">PT Solutionlabs Grup Indonesia</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm md:text-base">
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i> Managed
+                            the end-to-end testing lifecycle for multiple concurrent projects and logged issue findings
+                            accurately.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Developed UAT scenarios and User Manuals to support smooth testing, handover, and product
+                            adoption.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Leveraged backend engineering background to perform deep root-cause analysis, isolating
+                            database vs API vs frontend issues.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i> Executed
+                            API testing and endpoint validation using Postman to ensure reliable system functionality.
+                        </li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Conducted performance testing with JMeter and BlazeMeter to assess application reliability
+                            under varying loads.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i> Actively
+                            engaged in regular client meetings, demonstrating strong interpersonal skills and the
+                            confidence
+                            to communicate technical progress, testing phases, and issue resolutions directly to
+                            clients.</li>
                     </ul>
                 </div>
-
-                <!-- BE Role -->
-                <div class="pl-8 relative" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
-                    <span class="text-sm text-slate-400 font-bold tracking-widest uppercase">Jan 2025 - Sep 2025</span>
-                    <h3 class="text-2xl font-bold text-white mt-1">Backend Engineer (Internship)</h3>
-                    <h4 class="text-lg text-slate-400 mb-4">PT Solutionlabs Grup Indonesia</h4>
-                    <ul class="space-y-2 list-none">
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Developed scalable RESTful APIs using NestJS and Laravel.</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Managed relational databases using PostgreSQL and object storage via MinIO.</li>
-                        <li><i class="fa-solid fa-check text-primary mr-2 text-sm"></i> Integrated third-party APIs (Zenziva for OTP).</li>
+                <!-- Support BE Role -->
+                <!-- <div class="pl-10 relative group" data-aos="fade-up">
+                    <div class="absolute w-5 h-5 bg-dark border-4 border-slate-600 rounded-full -left-[11px] top-1 group-hover:border-primary transition-all"></div>
+                    <span class="text-sm text-slate-400 font-semibold tracking-widest uppercase mb-1 block">Mar 2025 - Sep 2025</span>
+                    <h3 class="text-2xl font-bold text-white">Support Backend Engineer (Internship)</h3>
+                    <h4 class="text-lg text-slate-400 mb-4 font-medium">Mining Operations Management System (AdaGo)</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm md:text-base">
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i> Resolved data rendering issues and optimized Laravel Blade views for precise data fetching.</li>
+                    </ul>
+                </div> -->
+                <!-- BE Intern Role -->
+                <div class="pl-10 relative group" data-aos="fade-up">
+                    <div
+                        class="absolute w-5 h-5 bg-dark border-4 border-slate-600 rounded-full -left-[11px] top-1 group-hover:border-primary transition-all">
+                    </div>
+                    <span class="text-sm text-slate-400 font-semibold tracking-widest uppercase mb-1 block">Jan 2025 -
+                        Sep 2025</span>
+                    <h3 class="text-2xl font-bold text-white">Backend Engineer (Internship)</h3>
+                    <h4 class="text-lg text-slate-400 mb-4 font-medium">PT Solutionlabs Grup Indonesia</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm md:text-base">
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Developed scalable backend services and RESTful APIs using NestJS and Laravel.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i> Managed
+                            relational databases using PostgreSQL and implemented MinIO for object storage.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Successfully integrated third-party APIs, including Zenziva for secure OTP (One-Time
+                            Password) authentication.</li>
+                        <li class="flex"><i class="fa-solid fa-arrow-right text-primary mt-1 mr-3 text-xs"></i>
+                            Collaborated with developers to debug backend logic and test APIs using Postman.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Selected Projects -->
-    <section id="projects" class="py-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center" data-aos="fade-right"><span class="text-primary mr-3">02.</span> Highlighted Projects</h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
-                <div class="bg-card rounded-xl p-6 border border-slate-700 hover:border-primary transition group hover:-translate-y-2 duration-300" data-aos="zoom-in">
-                    <div class="flex justify-between items-center mb-4">
-                        <i class="fa-solid fa-folder-open text-3xl text-primary"></i>
-                        <a href="https://github.com/namagithubmu" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">StuntingApps</h3>
-                    <p class="text-sm mb-4">Spearheaded the backend development of a digitalized Posyandu platform. Architected the PostgreSQL database and implemented secure OTP auth.</p>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-                        <span>NestJS</span><span>PostgreSQL</span><span>MinIO</span>
-                    </div>
-                </div>
+    <!-- Projects Portfolio (PEMISAHAN BE & QA) -->
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center" data-aos="fade-right">
+                <span class="text-primary font-mono mr-4">02.</span> Highlighted Projects
+            </h2>
 
-                <!-- Project 2 -->
-                <div class="bg-card rounded-xl p-6 border border-slate-700 hover:border-primary transition group hover:-translate-y-2 duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="flex justify-between items-center mb-4">
-                        <i class="fa-solid fa-bug-slash text-3xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">AdaGo (Mining Operations)</h3>
-                    <p class="text-sm mb-4">Managed QA lifecycle across critical modules. Authored comprehensive User Manuals and UAT documentation for seamless product handoffs.</p>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-                        <span>QA Testing</span><span>Laravel</span><span>Postman</span>
-                    </div>
-                </div>
+            <!-- 1. BACKEND PROJECTS SECTION -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold text-white mb-8 flex items-center border-b border-slate-800 pb-3"
+                    data-aos="fade-right">
+                    <i class="fa-solid fa-server text-primary mr-3"></i> Backend Engineering
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
 
-                <!-- Project 3 -->
-                <div class="bg-card rounded-xl p-6 border border-slate-700 hover:border-primary transition group hover:-translate-y-2 duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="flex justify-between items-center mb-4">
-                        <i class="fa-solid fa-mobile-screen text-3xl text-primary"></i>
+                    <!-- BE Project 1: CatatSehat -->
+                    <div class="glass-card rounded-xl p-8 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+                                CatatSehat</h3>
+                            <!-- GitHub Link Button -->
+                            <a href="https://github.com/dzuraa/catatsehat-general-api" target="_blank"
+                                class="flex items-center space-x-2 text-xs font-mono text-slate-300 bg-slate-800 hover:bg-primary/20 hover:text-primary px-3 py-1.5 rounded-lg border border-slate-700 hover:border-primary/50 transition-colors">
+                                <i class="fa-brands fa-github text-base"></i>
+                                <span class="hidden sm:inline">Source</span>
+                            </a>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            Spearheaded end-to-end backend development for a digitalized Posyandu (community health)
+                            recording platform. Managed all server-side operations, including architecting the
+                            PostgreSQL database, developing RESTful APIs, integrating MinIO for object storage, and
+                            implementing a secure OTP service, with comprehensive API documentation via Swagger.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono font-medium text-primary">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">NestJS</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">MinIO</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">OTP Service</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Swagger</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">LMS Merdeka Cerdas</h3>
-                    <p class="text-sm mb-4">Executed end-to-end mobile application testing under a strict one-month deadline. Conducted API validation before UI development.</p>
-                    <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400">
-                        <span>Mobile Testing</span><span>UAT</span><span>API Validation</span>
+
+                    <!-- BE Project 2: AdaGo (Restricted Access) -->
+                    <div class="glass-card rounded-xl p-8 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">AdaGo
+                                Module</h3>
+                            <!-- Restricted Access Badge -->
+                            <div class="flex items-center space-x-2 text-xs font-mono text-amber-300/80 bg-amber-400/10 px-3 py-1.5 rounded-lg border border-amber-400/20 cursor-not-allowed"
+                                title="Source code and project details are restricted">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span class="hidden sm:inline">Restricted Access</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            Supported backend maintenance for AdaGo, a mining operations management application
+                            developed for Adaro. The platform helps teams record and manage the needs of daily mining
+                            activities, including field work plans, operational requests, activity logs, and supporting
+                            data for more organized coordination across the operation. Optimized Laravel Blade views
+                            and enhanced data export functionalities to improve reporting and operational visibility.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono font-medium text-primary">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Laravel</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">MySQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 2. QA PROJECTS SECTION -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-8 flex items-center border-b border-slate-800 pb-3"
+                    data-aos="fade-right">
+                    <i class="fa-solid fa-bug-slash text-primary mr-3"></i> Quality Assurance
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- QA Project 1: LMS -->
+                    <div class="glass-card rounded-xl p-6 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up">
+                        <div class="flex justify-between items-start mb-4">
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">Mining
+                            Operations Management System (AdaGo)</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            An integrated mining operations management platform for PT Adaro Indonesia, designed to
+                            digitize and track daily field activities, incident reports, and operational metrics across
+                            various specialized sub-modules.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Bug Findings</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">API Testing</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">UAT
+                                Documentation</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">User Manuals</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Developer Ticket
+                                Assignment</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Client
+                                Presentations</span>
+                        </div>
+                    </div>
+
+                    <!-- QA Project 2: CGMS -->
+                    <div class="glass-card rounded-xl p-6 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex justify-between items-start mb-4">
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                            Contractor Onboarding System (COB)</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            An integrated contractor management system for PT Merdeka Copper Gold, designed to
+                            streamline site onboarding, personnel and equipment approvals, compliance assessments, and
+                            operational performance tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Bug Findings</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">API Testing</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Developer Ticket
+                                Assignment</span>
+                        </div>
+                    </div>
+
+                    <!-- QA Project 3: COB -->
+                    <div class="glass-card rounded-xl p-6 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex justify-between items-start mb-4">
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                            Learning Management System (LMS Merdeka Cerdas)</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            An employee training platform for PT Merdeka Copper Gold to digitize learning materials,
+                            onboarding modules, and workforce skill assessments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Bug Findings</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">API Testing</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">User Manuals</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Developer Ticket
+                                Assignment</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Client
+                                Presentations</span>
+                        </div>
+                    </div>
+
+                    <!-- QA Project 4: Mining Operations -->
+                    <div class="glass-card rounded-xl p-6 hover:-translate-y-2 transition duration-300 group flex flex-col h-full"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex justify-between items-start mb-4">
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                            Coal Getting Management System (CGMS)</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed flex-grow">
+                            A specialized mining management platform for PT Energi Sinar Tambang, designed to streamline
+                            coal getting planning, track daily production metrics, and record field operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-300">
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Bug Findings</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">UAT
+                                Documentation</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">User Manuals</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Developer Ticket
+                                Assignment</span>
+                            <span class="bg-primary/10 border border-primary/20 px-3 py-1 rounded">Client
+                                Presentations</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Education, Certs & Skills -->
-    <section id="skills" class="py-20 bg-slate-900/50">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
-            
-            <div data-aos="fade-right">
-                <h2 class="text-3xl font-bold text-white mb-8 flex items-center"><span class="text-primary mr-3">03.</span> Education & Certs</h2>
-                
-                <div class="bg-card p-6 rounded-xl border border-slate-700 mb-6 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-                    <h3 class="text-xl font-bold text-white">Associate Degree (D3) in Informatics Engineering</h3>
-                    <p class="text-primary mb-2">Universitas Sebelas Maret, Surakarta</p>
-                    <p class="text-sm"><i class="fa-solid fa-award mr-2"></i>Honors: Cum Laude (GPA: 3.78)</p>
-                </div>
+    <!-- Skills, Certs & Education -->
+    <section id="skills" class="py-24 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6 space-y-16">
 
-                <div class="bg-card p-6 rounded-xl border border-slate-700">
-                    <h3 class="text-lg font-bold text-white mb-3">Certifications</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center justify-between border-b border-slate-700 pb-2">
-                            <span><i class="fa-solid fa-certificate text-primary mr-2"></i> TOEIC English Test</span>
-                            <span class="text-sm bg-slate-800 px-2 py-1 rounded">Score: 735</span>
-                        </li>
-                        <li class="flex items-center justify-between">
-                            <span><i class="fa-solid fa-certificate text-primary mr-2"></i> BNSP Web Programmer</span>
-                            <span class="text-sm bg-slate-800 px-2 py-1 rounded">Certified</span>
-                        </li>
-                    </ul>
+            <!-- Left Col: Tech Skills -->
+            <div data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                    <span class="text-primary font-mono mr-4">03.</span> Skills & Expertise
+                </h2>
+
+                <div class="space-y-8">
+                    <div>
+                        <h4
+                            class="text-sm font-semibold text-primary uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">
+                            QA & Testing Tools</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">E2E
+                                Documentation</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Bug
+                                Findings</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">API
+                                Testing</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Manual
+                                Testing</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Regression
+                                Testing</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Postman</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Apache
+                                JMeter</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">BlazeMeter</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Jam.dev</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">DBeaver</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">TablePlus</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">PHPMyAdmin</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4
+                            class="text-sm font-semibold text-primary uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">
+                            Backend & Database</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">TypeScript</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">PHP</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">NestJS</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Laravel</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">PostgreSQL</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">MySQL</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Swagger</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">DBeaver</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">TablePlus</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">REST
+                                API</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4
+                            class="text-sm font-semibold text-primary uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">
+                            Soft Skills & Productivity</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Communication</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Client
+                                & User Interaction</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Root-Cause
+                                Analysis</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Problem
+                                Solving</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Troubleshooting</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Adaptability</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Analytical
+                                Thinking</span>
+                            <span
+                                class="px-4 py-2 bg-card border border-slate-700 rounded-lg text-sm text-slate-300">Team
+                                Collaboration</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div data-aos="fade-left">
-                <h2 class="text-3xl font-bold text-white mb-8 flex items-center"><span class="text-primary mr-3">04.</span> Technical Skills</h2>
-                <div class="flex flex-wrap gap-3">
-                    <!-- Testing -->
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">API Testing (Postman)</span>
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">Apache JMeter</span>
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">End-to-End Testing</span>
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">UAT Execution</span>
-                    <!-- Backend -->
-                    <span class="px-4 py-2 bg-slate-800 border border-primary/50 text-primary rounded-full text-sm cursor-default">NestJS</span>
-                    <span class="px-4 py-2 bg-slate-800 border border-primary/50 text-primary rounded-full text-sm cursor-default">Laravel</span>
-                    <span class="px-4 py-2 bg-slate-800 border border-primary/50 text-primary rounded-full text-sm cursor-default">PostgreSQL</span>
-                    <span class="px-4 py-2 bg-slate-800 border border-primary/50 text-primary rounded-full text-sm cursor-default">RESTful APIs</span>
-                    <!-- Soft Skills -->
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">Client Communication</span>
-                    <span class="px-4 py-2 bg-card border border-slate-700 rounded-full text-sm hover:border-primary transition cursor-default">Root-Cause Analysis</span>
+            <!-- Right Col: Education & Certs -->
+            <div class="border-t border-slate-800 pt-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-8 flex items-center">
+                    <span class="text-primary font-mono mr-4">04.</span> Credentials
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-bold text-white mb-5 border-b border-slate-700 pb-2">Education</h3>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-graduation-cap text-primary mt-1"></i>
+                            <div>
+                                <p class="text-slate-200 text-sm font-medium">D3 Informatics Engineering</p>
+                                <p class="text-slate-500 text-xs mt-1">Universitas Sebelas Maret</p>
+                                <p class="text-primary text-xs mt-1">Cum Laude (GPA: 3.78)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-bold text-white mb-5 border-b border-slate-700 pb-2">Certifications</h3>
+                        <ul class="divide-y divide-slate-800">
+                            <li class="py-3 first:pt-0 last:pb-0 flex items-start gap-3">
+                                <i class="fa-solid fa-language text-primary mt-1"></i>
+                                <div>
+                                    <p class="text-slate-200 text-sm font-medium">TOEIC English Test</p>
+                                    <p class="text-primary text-xs mt-1">Score: 735</p>
+                                </div>
+                            </li>
+                            <li class="py-3 first:pt-0 last:pb-0 flex items-start gap-3">
+                                <i class="fa-solid fa-certificate text-primary mt-1"></i>
+                                <div>
+                                    <p class="text-slate-200 text-sm font-medium">BNSP Web Programmer</p>
+                                    <p class="text-slate-500 text-xs mt-1">Professional Certification</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -200,14 +530,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center text-sm border-t border-slate-800 mt-12">
-        <p>Designed & Built by Daffa Dzulfikar Ramadhan.</p>
+    <footer class="py-8 text-center text-sm border-t border-slate-800 bg-dark text-slate-500">
+        <p>&copy; 2026 Daffa Dzulfikar Ramadhan.</p>
     </footer>
 
-    <!-- AOS Animation Initialization -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, offset: 100 });
+        AOS.init({ once: true, offset: 50 });
     </script>
 </body>
+
 </html>
